@@ -14,6 +14,32 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* ... Previous styles ... */
+
+/* Testimonials section styles */
+.testimonials {
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonial-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.user-info {
+  font-style: italic;
+}
+
 /* Header styles */
 header {
   background-color: #333;
@@ -37,7 +63,8 @@ nav {
   text-decoration: none;
 }
 
-.nav-links li a {
+.nav-links li a,
+.social-links li a {
   color: #fff;
   text-decoration: none;
 }
@@ -99,6 +126,38 @@ nav {
   margin-bottom: 1rem;
 }
 
+/* ... Previous styles ... */
+
+/* Testimonials section styles */
+.testimonials {
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonial-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.rating {
+  color: #ffd700; /* Golden color for stars */
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.user-info {
+  font-style: italic;
+}
+
 .course-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -125,4 +184,30 @@ footer {
 
 .social-links img {
   width: 30px;
+}
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide the navigation links by default for smaller screens */
+    flex-direction: column; /* Stack the navigation links vertically */
+    text-align: center;
+    background-color: #444; /* Add a background color to the menu for contrast */
+    position: absolute;
+    top: 70px; /* Adjust the distance from the top as needed */
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .menu-icon {
+    display: block; /* Display the menu icon for smaller screens */
+  }
+
+  /* Show the navigation links when the menu icon is clicked */
+  .show-nav {
+    display: flex;
+  }
 }
