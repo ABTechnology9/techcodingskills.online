@@ -12,6 +12,7 @@ li {
 
 body {
   font-family: Arial, sans-serif;
+  font-size: 1.5em;
 }
 
 .coarses {
@@ -253,6 +254,10 @@ nav {
 .course-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.container2 {
+  padding: 0 60px;
 }
 
 /* Footer styles */
