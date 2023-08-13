@@ -276,6 +276,11 @@ footer {
 
 /* Existing styles */
 
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .footer {
   background-color: #333;
   color: #fff;
@@ -284,15 +289,31 @@ footer {
 
 .footer-content {
   display: flex;
+  align-items: start;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
 .footer-section {
   flex: 1;
+  width: 80px;
+
   margin: 0 20px;
+}
+
+.footer-section .learnmore {
+  /* margin-top: 20px; */
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+}
+
+.footer-section .connect {
+  margin-top: 20px;
+
+  text-align: left;
 }
 
 .footer-section h3 {
@@ -362,5 +383,30 @@ footer {
   /* Show the navigation links when the menu icon is clicked */
   .show-nav {
     display: flex;
+  }
+
+  /* footer section */
+
+  .logo {
+    text-align: center;
+  }
+  .footer-section {
+    width: unset;
+  }
+
+  .footer-section ul {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-content .learnmore {
+    text-align: center;
   }
 }
