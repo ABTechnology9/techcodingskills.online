@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptMost asked Interview Question and Answers JavaScript Concepts</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .concept {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .concept h3 {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .concept .content {
+            display: none;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="">AB Technologies9 Academy</a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="earnsgrowth.html">Earn with us</a></li>
+                <li><a href="https://www.youtube.com/@abtechnologies9">Free videos</a></li>
+
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>JavaScript Concepts</h2>
+
+    <!-- Var, Let, and Const -->
+    <div class="concept">
+        <h3 onclick="toggleContent('varLetConst')">Var, Let, and Const</h3>
+        <div id="varLetConst" class="content">
+            <code>
+                let x = 10;<br>
+                const y = 20;
+            </code>
+        </div>
+    </div>
+
+    <!-- Hoisting -->
+    <div class="concept">
+        <h3 onclick="toggleContent('hoisting')">Hoisting</h3>
+        <div id="hoisting" class="content">
+            <code>
+                console.log(a); // undefined<br>
+                var a = 5;
+            </code>
+        </div>
+    </div>
+
+    <!-- The Temporal Dead Zone -->
+    <div class="concept">
+        <h3 onclick="toggleContent('temporalDeadZone')">The Temporal Dead Zone</h3>
+        <div id="temporalDeadZone" class="content">
+            <code>
+                console.log(b); // ReferenceError<br>
+                let b = 10;
+            </code>
+        </div>
+    </div>
+
+    <!-- Closures -->
+    <div class="concept">
+        <h3 onclick="toggleContent('closures')">Closures</h3>
+        <div id="closures" class="content">
+            <code>
+                function outer() {<br>
+                    &nbsp;&nbsp;let c = 5;<br>
+                    &nbsp;&nbsp;function inner() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(c);<br>
+                    &nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;return inner;<br>
+                }<br>
+                const innerFunction = outer();<br>
+                innerFunction(); // Outputs 5
+            </code>
+        </div>
+    </div>
+
+    <!-- Object and its methods -->
+    <div class="concept">
+        <h3 onclick="toggleContent('objectMethods')">Object and its methods</h3>
+        <div id="objectMethods" class="content">
+            <code>
+                const person = {<br>
+                    &nbsp;&nbsp;name: 'John',<br>
+                    &nbsp;&nbsp;age: 30,<br>
+                    &nbsp;&nbsp;greet: function() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(`Hello, I'm ${this.name}`);<br>
+                    &nbsp;&nbsp;}<br>
+                };<br>
+                person.greet(); // Outputs: Hello, I'm John
+            </code>
+        </div>
+    </div>
+
+    <!-- Callback Function -->
+    <div class="concept">
+        <h3 onclick="toggleContent('callbackFunction')">Callback Function</h3>
+        <div id="callbackFunction" class="content">
+            <code>
+                function doSomething(callback) {<br>
+                    &nbsp;&nbsp;console.log("Doing something...");<br>
+                    &nbsp;&nbsp;callback();<br>
+                }<br>
+                function callbackFunction() {<br>
+                    &nbsp;&nbsp;console.log("Callback executed.");<br>
+                }<br>
+                doSomething(callbackFunction);
+            </code>
+        </div>
+    </div>
+
+    <!-- JavaScript Map -->
+    <div class="concept">
+        <h3 onclick="toggleContent('jsMap')">JavaScript Map</h3>
+        <div id="jsMap" class="content">
+            <code>
+                const myMap = new Map();<br>
+                myMap.set('key1', 'value1');<br>
+                myMap.set('key2', 'value2');<br>
+                console.log(myMap.get('key1')); // Outputs: value1
+            </code>
+        </div>
+    </div>
+
+    <!-- Reduce Method -->
+    <div class="concept">
+        <h3 onclick="toggleContent('reduceMethod')">Reduce Method</h3>
+        <div id="reduceMethod" class="content">
+            <code>
+                const numbers = [1, 2, 3, 4, 5];<br>
+                const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);<br>
+                console.log(sum); // Outputs: 15
+            </code>
+        </div>
+    </div>
+
+    <!-- Unique Values - Set -->
+    <div class="concept">
+        <h3 onclick="toggleContent('uniqueValues')">Unique Values - Set</h3>
+        <div id="uniqueValues" class="content">
+            <code>
+                const uniqueNumbers = new Set([1, 2, 2, 3, 4, 4]);<br>
+                console.log(uniqueNumbers); // Outputs: Set { 1, 2, 3, 4 }
+            </code>
+        </div>
+    </div>
+
+    <!-- Destructuring -->
+    <div class="concept">
+        <h3 onclick="toggleContent('destructuring')">Destructuring</h3>
+        <div id="destructuring" class="content">
+            <code>
+                const person = { name: 'Alice', age: 25 };<br>
+                const { name, age } = person;<br>
+                console.log(name, age); // Outputs: Alice 25
+            </code>
+        </div>
+    </div>
+
+    <!-- Async/Await -->
+    <div class="concept">
+        <h3 onclick="toggleContent('asyncAwait')">Async/Await</h3>
+        <div id="asyncAwait" class="content">
+            <code>
+                async function fetchData() {<br>
+                    &nbsp;&nbsp;const response = await fetch('https://api.example.com/data');<br>
+                    &nbsp;&nbsp;const data = await response.json();<br>
+                    &nbsp;&nbsp;console.log(data);<br>
+                }<br>
+                fetchData();
+            </code>
+        </div>
+    </div>
+
+    <!-- Promises -->
+    <div class="concept">
+        <h3 onclick="toggleContent('promises')">Promises</h3>
+        <div id="promises" class="content">
+            <code>
+                const fetchData = () => {<br>
+                    &nbsp;&nbsp;return new Promise((resolve, reject) => {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;fetch('https://api.example.com/data')<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(response => response.json())<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(data => resolve(data))<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.catch(error => reject(error));<br>
+                    &nbsp;&nbsp;});<br>
+                };<br>
+                fetchData()<br>
+                    &nbsp;&nbsp;.then(data => console.log(data))<br>
+                    &nbsp;&nbsp;.catch(error => console.error(error));
+            </code>
+        </div>
+    </div>
+
+    <!-- Fetch API -->
+    <div class="concept">
+        <h3 onclick="toggleContent('fetchAPI')">Fetch API</h3>
+        <div id="fetchAPI" class="content">
+            <code>
+                fetch('https://api.example.com/data')<br>
+                    &nbsp;&nbsp;.then(response => response.json())<br>
+                    &nbsp;&nbsp;.then(data => console.log(data))<br>
+                    &nbsp;&nbsp;.catch(error => console.error(error));
+            </code>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(conceptId) {
+            const content = document.getElementById(conceptId);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
