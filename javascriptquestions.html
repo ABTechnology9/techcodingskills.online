@@ -11,11 +11,15 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            /* padding: 20px; */
         }
 
         h2 {
             margin-top: 0;
+        }
+
+        .container1 {
+            padding: 10px;
         }
 
         .concept {
@@ -53,194 +57,239 @@
                 <li><a href="#">Courses</a></li>
                 <li><a href="earnsgrowth.html">Earn with us</a></li>
                 <li><a href="https://www.youtube.com/@abtechnologies9">Free videos</a></li>
-
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <!-- ... (Previous HTML code) ... -->
 
-    <h2>JavaScript Concepts</h2>
-
-    <!-- Var, Let, and Const -->
-    <div class="concept">
-        <h3 onclick="toggleContent('varLetConst')">Var, Let, and Const</h3>
-        <div id="varLetConst" class="content">
-            <code>
-                let x = 10;<br>
-                const y = 20;
-            </code>
-        </div>
-    </div>
-
-    <!-- Hoisting -->
+    <!-- Concept: Hoisting -->
     <div class="concept">
         <h3 onclick="toggleContent('hoisting')">Hoisting</h3>
         <div id="hoisting" class="content">
+            <p>
+                Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their
+                containing scope during compilation, allowing them to be used before they are actually declared.
+            </p>
             <code>
-                console.log(a); // undefined<br>
-                var a = 5;
-            </code>
+            console.log(a); // undefined<br>
+            var a = 5;
+        </code>
         </div>
     </div>
 
-    <!-- The Temporal Dead Zone -->
+    <!-- Concept: The Temporal Dead Zone -->
     <div class="concept">
         <h3 onclick="toggleContent('temporalDeadZone')">The Temporal Dead Zone</h3>
         <div id="temporalDeadZone" class="content">
+            <p>
+                The Temporal Dead Zone (TDZ) is the period between the start of a scope and the point where a variable
+                is declared. Trying to access a variable during the TDZ results in a ReferenceError.
+            </p>
             <code>
-                console.log(b); // ReferenceError<br>
-                let b = 10;
-            </code>
+            console.log(b); // ReferenceError<br>
+            let b = 10;
+        </code>
         </div>
     </div>
 
-    <!-- Closures -->
+    <!-- Additional concepts (similar structure) -->
+
+    <!-- Concept: Closures -->
     <div class="concept">
         <h3 onclick="toggleContent('closures')">Closures</h3>
         <div id="closures" class="content">
+            <p>
+                Closures are a powerful feature in JavaScript that allows functions to remember and access variables
+                from their containing scope, even after that scope has executed.
+            </p>
             <code>
-                function outer() {<br>
-                    &nbsp;&nbsp;let c = 5;<br>
-                    &nbsp;&nbsp;function inner() {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(c);<br>
-                    &nbsp;&nbsp;}<br>
-                    &nbsp;&nbsp;return inner;<br>
-                }<br>
-                const innerFunction = outer();<br>
-                innerFunction(); // Outputs 5
-            </code>
+            function outer() {<br>
+                &nbsp;&nbsp;let c = 5;<br>
+                &nbsp;&nbsp;function inner() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(c);<br>
+                &nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;return inner;<br>
+            }<br>
+            const innerFunction = outer();<br>
+            innerFunction(); // Outputs 5
+        </code>
         </div>
     </div>
 
-    <!-- Object and its methods -->
-    <div class="concept">
-        <h3 onclick="toggleContent('objectMethods')">Object and its methods</h3>
-        <div id="objectMethods" class="content">
-            <code>
-                const person = {<br>
-                    &nbsp;&nbsp;name: 'John',<br>
-                    &nbsp;&nbsp;age: 30,<br>
-                    &nbsp;&nbsp;greet: function() {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(`Hello, I'm ${this.name}`);<br>
-                    &nbsp;&nbsp;}<br>
-                };<br>
-                person.greet(); // Outputs: Hello, I'm John
-            </code>
-        </div>
-    </div>
+    <!-- ... (Previous HTML code) ... -->
 
-    <!-- Callback Function -->
-    <div class="concept">
-        <h3 onclick="toggleContent('callbackFunction')">Callback Function</h3>
-        <div id="callbackFunction" class="content">
-            <code>
-                function doSomething(callback) {<br>
-                    &nbsp;&nbsp;console.log("Doing something...");<br>
-                    &nbsp;&nbsp;callback();<br>
-                }<br>
-                function callbackFunction() {<br>
-                    &nbsp;&nbsp;console.log("Callback executed.");<br>
-                }<br>
-                doSomething(callbackFunction);
-            </code>
-        </div>
-    </div>
-
-    <!-- JavaScript Map -->
+    <!-- Concept: JavaScript Map -->
     <div class="concept">
         <h3 onclick="toggleContent('jsMap')">JavaScript Map</h3>
         <div id="jsMap" class="content">
+            <p>
+                The JavaScript Map is a collection that stores key-value pairs where the keys can be of any data type.
+                It provides a way to associate values with keys and is often used when you need to maintain the order of
+                elements.
+            </p>
             <code>
-                const myMap = new Map();<br>
-                myMap.set('key1', 'value1');<br>
-                myMap.set('key2', 'value2');<br>
-                console.log(myMap.get('key1')); // Outputs: value1
-            </code>
+            const myMap = new Map();<br>
+            myMap.set('key1', 'value1');<br>
+            myMap.set('key2', 'value2');<br>
+            console.log(myMap.get('key1')); // Outputs: value1
+        </code>
         </div>
     </div>
 
-    <!-- Reduce Method -->
+    <!-- Concept: Reduce Method -->
     <div class="concept">
         <h3 onclick="toggleContent('reduceMethod')">Reduce Method</h3>
         <div id="reduceMethod" class="content">
+            <p>
+                The "reduce" method is used to apply a function to an accumulator and each element in an array to reduce
+                the array to a single value. It's often used for calculations such as summing up array elements.
+            </p>
             <code>
-                const numbers = [1, 2, 3, 4, 5];<br>
-                const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);<br>
-                console.log(sum); // Outputs: 15
-            </code>
+            const numbers = [1, 2, 3, 4, 5];<br>
+            const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);<br>
+            console.log(sum); // Outputs: 15
+        </code>
         </div>
     </div>
 
-    <!-- Unique Values - Set -->
+    <!-- Concept: Unique Values - Set -->
     <div class="concept">
         <h3 onclick="toggleContent('uniqueValues')">Unique Values - Set</h3>
         <div id="uniqueValues" class="content">
+            <p>
+                The Set object in JavaScript represents a collection of unique values. It can be used to store and
+                manage unique elements, helping you eliminate duplicates from arrays.
+            </p>
             <code>
-                const uniqueNumbers = new Set([1, 2, 2, 3, 4, 4]);<br>
-                console.log(uniqueNumbers); // Outputs: Set { 1, 2, 3, 4 }
-            </code>
+            const uniqueNumbers = new Set([1, 2, 2, 3, 4, 4]);<br>
+            console.log(uniqueNumbers); // Outputs: Set { 1, 2, 3, 4 }
+        </code>
         </div>
     </div>
 
-    <!-- Destructuring -->
+    <!-- Concept: Destructuring -->
     <div class="concept">
         <h3 onclick="toggleContent('destructuring')">Destructuring</h3>
         <div id="destructuring" class="content">
+            <p>
+                Destructuring is a feature in JavaScript that allows you to extract values from objects or arrays and
+                assign them to variables in a more concise and readable way.
+            </p>
             <code>
-                const person = { name: 'Alice', age: 25 };<br>
-                const { name, age } = person;<br>
-                console.log(name, age); // Outputs: Alice 25
-            </code>
+            const person = { name: 'Alice', age: 25 };<br>
+            const { name, age } = person;<br>
+            console.log(name, age); // Outputs: Alice 25
+        </code>
         </div>
     </div>
 
-    <!-- Async/Await -->
+    <!-- Concept: Async/Await -->
     <div class="concept">
         <h3 onclick="toggleContent('asyncAwait')">Async/Await</h3>
         <div id="asyncAwait" class="content">
+            <p>
+                Async/Await is a modern way to work with asynchronous code in JavaScript. It allows you to write
+                asynchronous code in a more synchronous-looking style, making it easier to read and understand.
+            </p>
             <code>
-                async function fetchData() {<br>
-                    &nbsp;&nbsp;const response = await fetch('https://api.example.com/data');<br>
-                    &nbsp;&nbsp;const data = await response.json();<br>
-                    &nbsp;&nbsp;console.log(data);<br>
-                }<br>
-                fetchData();
-            </code>
+            async function fetchData() {<br>
+                &nbsp;&nbsp;const response = await fetch('https://api.example.com/data');<br>
+                &nbsp;&nbsp;const data = await response.json();<br>
+                &nbsp;&nbsp;console.log(data);<br>
+            }<br>
+            fetchData();
+        </code>
         </div>
     </div>
 
-    <!-- Promises -->
+    <!-- Concept: Promises -->
     <div class="concept">
         <h3 onclick="toggleContent('promises')">Promises</h3>
         <div id="promises" class="content">
+            <p>
+                Promises are a way to handle asynchronous operations in JavaScript. They provide a more structured and
+                readable approach to handling callbacks and managing async code flow.
+            </p>
             <code>
-                const fetchData = () => {<br>
-                    &nbsp;&nbsp;return new Promise((resolve, reject) => {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;fetch('https://api.example.com/data')<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(response => response.json())<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(data => resolve(data))<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.catch(error => reject(error));<br>
-                    &nbsp;&nbsp;});<br>
-                };<br>
-                fetchData()<br>
-                    &nbsp;&nbsp;.then(data => console.log(data))<br>
-                    &nbsp;&nbsp;.catch(error => console.error(error));
-            </code>
+            const fetchData = () => {<br>
+                &nbsp;&nbsp;return new Promise((resolve, reject) => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;fetch('https://api.example.com/data')<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(response => response.json())<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(data => resolve(data))<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.catch(error => reject(error));<br>
+                &nbsp;&nbsp;});<br>
+            };<br>
+            fetchData()<br>
+                &nbsp;&nbsp;.then(data => console.log(data))<br>
+                &nbsp;&nbsp;.catch(error => console.error(error));
+        </code>
         </div>
     </div>
 
-    <!-- Fetch API -->
+    <!-- Concept: Fetch API -->
     <div class="concept">
         <h3 onclick="toggleContent('fetchAPI')">Fetch API</h3>
         <div id="fetchAPI" class="content">
+            <p>
+                The Fetch API provides an interface for making network requests in a more modern way compared to
+                traditional XMLHttpRequest. It returns Promises, making it easier to handle async data retrieval.
+            </p>
             <code>
-                fetch('https://api.example.com/data')<br>
-                    &nbsp;&nbsp;.then(response => response.json())<br>
-                    &nbsp;&nbsp;.then(data => console.log(data))<br>
-                    &nbsp;&nbsp;.catch(error => console.error(error));
-            </code>
+            fetch('https://api.example.com/data')<br>
+                &nbsp;&nbsp;.then(response => response.json())<br>
+                &nbsp;&nbsp;.then(data => console.log(data))<br>
+                &nbsp;&nbsp;.catch(error => console.error(error));
+        </code>
         </div>
     </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">AB Technology9</div>
+
+            </div>
+            <div class="footer-section">
+                <ul class="learnmore">
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Courses </li>
+                    <li>Earn with Us </li>
+                    <!-- <li>Teach on Our Platform</li>
+                      People who have more than 2+ years experience can only teach We want the best teaching experts
+                      So that our students should get best Results and Learning
+                    -->
+                    <li>Interview Questions</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <div class="connect">Interview Q&A</div>
+                <ul class="learnmore">
+                    <li><a href="#">html5 & CSS3</a></li>
+                    <li><a href="/javascriptquestions.html">JavaScript</a></li>
+                    <li><a href="/reactjsinterviewquestions.html">Reactjs</a></li>
+                    <li><a href="#">Bootstrap and tailwind</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <div class="connect">Connect with Us</div>
+                <ul class="learnmore">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 AB Technologies9 Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
 
     <script>
         function toggleContent(conceptId) {
