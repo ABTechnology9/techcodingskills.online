@@ -65,6 +65,25 @@ body {
 .logo a {
   color: #fff;
   text-decoration: none;
+  /* background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff); */
+  background-size: 200%;
+  color: wheat;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+    color: #ff0000;
+  }
+  50% {
+    background-position: 100% 50%;
+    color: #00ff00;
+  }
+  100% {
+    background-position: 0% 50%;
+    color: aqua;
+  }
 }
 
 /* ... Previous styles ... */
@@ -120,6 +139,12 @@ body {
   border-radius: 5px;
   padding: 1rem;
   margin-bottom: 1rem;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .testimonial-card img {
@@ -244,6 +269,7 @@ nav {
 .rating {
   color: #ffd700; /* Golden color for stars */
   font-size: 24px;
+  width: 350px;
   margin-bottom: 0.5rem;
 }
 
@@ -272,6 +298,20 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.moreinfo li {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.moreinfo li :hover,
+.moreinfo li a :hover {
+  color: #f57c00;
+}
+
+.moreinfo {
+  margin-bottom: 20px !important;
 }
 
 /* Existing styles */
@@ -360,6 +400,9 @@ footer {
   width: 30px;
 }
 @media screen and (max-width: 768px) {
+  .reviews {
+    flex-direction: column;
+  }
   .nav-links {
     display: none; /* Hide the navigation links by default for smaller screens */
     flex-direction: column; /* Stack the navigation links vertically */
