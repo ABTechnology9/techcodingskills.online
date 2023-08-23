@@ -244,6 +244,31 @@ nav {
   margin-bottom: 1rem;
 }
 
+/* Add this CSS to your existing styles */
+.faq {
+  margin-top: 40px;
+  margin: 20px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.faq-item h3.question {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.faq-item p.answer {
+  margin: 10px 0;
+  color: #666;
+}
+
 /* ... Previous styles ... */
 
 /* Testimonials section styles */

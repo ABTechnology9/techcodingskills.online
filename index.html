@@ -12,11 +12,14 @@
 <style>
 
 </style>
+
+
 <style>
-    /* ... Other styles ... */
+
 </style>
 
 <body>
+
     <header>
         <nav>
             <div class="logo"><a href="">AB Technologies9 Academy</a></div>
@@ -29,7 +32,6 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="hero">
             <div class="hero-content">
@@ -131,6 +133,34 @@
 
         </div>
         <!-- ... Footer and closing tags ... -->
+        <!-- Add this section within the <main> element, after the testimonials section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3 class="question">What courses do you offer?</h3>
+                <p class="answer">We offer a range of front-end development courses including HTML, CSS, JavaScript,
+                    React.js, and more. Check our <a href="#">Courses</a> page for more details.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="question">How can I enroll in a course?</h3>
+                <p class="answer">Enrolling in a course is easy. Simply visit our <a href="#">Enroll Now</a> page and
+                    follow the instructions to register for the desired course.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="question">Are the courses suitable for beginners?</h3>
+                <p class="answer">Yes, we have courses suitable for beginners. Our courses cover the basics and
+                    gradually progress to more advanced topics.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="question">If I am Not Satisfied will I get Refunded my Money?</h3>
+                <p class="answer">We want you to be satisfied, so all eligible courses purchased on Udemy can be
+                    refunded within 30 days. For whatever reason, if you are unhappy with a course, you can request a
+                    refund, provided the request meets the guidelines in our refund policy. Most refunds are returned
+                    via the original payment method.</p>
+            </div>
+            <!-- Add more FAQ items as needed -->
+        </section>
+
 
         <section class="testimonials">
             <h2>Testimonials and Reviews</h2>
@@ -230,6 +260,31 @@
             <p>&copy; 2023 AB Technologies9 Academy. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('#toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        function updateNavDisplay() {
+            if (window.innerWidth > 768) {
+                navLinks.style.display = 'flex';
+            } else {
+                navLinks.style.display = menuToggle.checked ? 'flex' : 'none';
+            }
+        }
+
+        menuToggle.addEventListener('change', () => {
+            updateNavDisplay();
+        });
+
+        window.addEventListener('resize', () => {
+            updateNavDisplay();
+        });
+
+        // Initial call to set the initial state based on screen size
+        updateNavDisplay();
+
+    </script>
 
 </body>
 
