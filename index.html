@@ -20,26 +20,48 @@
         background-color: #EBE822;
         padding: 10px;
         text-align: center;
+        max-width: 100%;
         animation: zoom-in-zoom-out 5s ease-in infinite;
     }
 
     @keyframes zoom-in-zoom-out {
-        0% {
-            transform: scale(1, 1);
+        70% {
+            transform: translateY(0%);
         }
 
-        50% {
-            transform: scale(1.5, 1.5);
+        80% {
+            transform: translateY(20%);
+        }
+
+        90% {
+            transform: translateY(0%);
+        }
+
+        95% {
+            transform: translateY(25%);
+        }
+
+        97% {
+            transform: translateY(0%);
+        }
+
+        99% {
+            transform: translateY(35%);
         }
 
         100% {
-            transform: scale(1, 1);
+            transform: translateY(0);
         }
+
     }
 </style>
 
 <body>
-    <div class="notification"> Offer get Reactjs Coarse Rs 4̶4̶9̶9̶ &nbsp; Coarse at Rs499/- only ENROLL NOW!!! </div>
+    <div>
+        <div class="notification"> Offer get Reactjs Coarse Rs 4̶4̶9̶9̶ &nbsp; Coarse at Rs499/- only ENROLL NOW!!!
+        </div>
+
+    </div>
     <header>
         <nav>
             <div class="logo"><a href="">AB Technologies9 Academy</a></div>
