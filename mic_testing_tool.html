@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microphone Test</title>
+    <link rel="stylesheet" href="styles.css">
+  
+  <style>
+*{
+  margin:0px;
+  padding:0px;
+  
+}
+
+body {
+    font-family: Arial, sans-serif;
+  color:blue;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.navbar{
+  background:yellow;
+  width:100%;
+  padding:20px;
+  text-align:center;
+  font-size:20px;
+}
+audio {
+    width: 100%;
+    max-width: 400px;
+    display: none;
+}
+ </style>
+</head>
+<body>
+  <div class="navbar"> AB Mic Testing Tool </div>
+    <div class="container">
+        <h1>Microphone Test</h1>
+        <button id="startRecord">Start Recording</button>
+        <button id="stopRecord" disabled>Stop Recording</button>
+        <button id="playAudio" disabled>Play Audio</button>
+        <audio id="audioElement" controls></audio>
+    </div>
+    <script src="script.js"></script>
+  <script>
+const startRecordButton = document.getElementById("startRecord");
+const stopRecordButton = document.getElementById("stopRecord");
+const playAudioButton = document.getElementById("playAudio");
+const audioElement = document.getElementById("audioElement");
+let mediaRecorder;
+let audioChunks = [];
+
+startRecordButton.addEventListener("click", () => {
+    startRecording();
+});
+
+stopRecordButton.addEventListener("click", () => {
+    stopRecording();
+});
+
+playAudioButton.addEventListener("click", () => {
+    playAudio();
+});
+
+function startRecording() {
+    navigator.mediaDevices
+        .getUserMedia({ audio: true })
+        .then((stream) => {
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.ondataavailable = (e) => {
+                audioChunks.push(e.data);
+            };
+            mediaRecorder.onstop = () => {
+                const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
+                audioElement.src = URL.createObjectURL(audioBlob);
+                playAudioButton.removeAttribute("disabled");
+            };
+            mediaRecorder.start();
+            startRecordButton.setAttribute("disabled", true);
+            stopRecordButton.removeAttribute("disabled");
+        })
+        .catch((error) => console.error("Error accessing the microphone:", error));
+}
+
+function stopRecording() {
+    mediaRecorder.stop();
+    startRecordButton.removeAttribute("disabled");
+    stopRecordButton.setAttribute("disabled", true);
+}
+
+function playAudio() {
+    audioElement.style.display = "block";
+    audioElement.play();
+}
+
+
+ </script>
+</body>
+</html>
