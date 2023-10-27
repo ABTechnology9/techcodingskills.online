@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+      
+      .navbar{
+       width:100%;
+        background:yellow;
+        padding:20px;
+        font-size:24px;
+      }
+
+        #header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px;
+            text-align: right;
+            font-size: 16px;
+        }
+
+        #timer {
+            font-size: 48px;
+            margin-top: 20px;
+        }
+
+        #controls {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #3498db;
+            color: #ecf0f1;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #break-type {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #e74c3c;
+        }
+
+        #faq {
+            margin-top: 20px;
+            text-align: left;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+  
+  <div class="navbar"> AB Study Timer </div>
+    <div id="header">
+        Current Time: <span id="current-time">00:00:00</span>
+    </div>
+    <h1>Study Timer</h1>
+    <div id="timer">25:00</div>
+    <div id="controls">
+        <button id="start">Start</button>
+        <button id="pause" disabled>Pause</button>
+        <button id="reset">Reset</button>
+    </div>
+    <div id="break-type">Study</div>
+    <div id="break-select">
+        <label for="break-time">Select Break Time: </label>
+        <select id="break-time">
+            <option value="5">5 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="25">25 minutes</option>
+        </select>
+    </div>
+
+    <div id="faq">
+        <h2>FAQ</h2>
+        <p><strong>Q:</strong> How does the timer work?</p>
+        <p><strong>A:</strong> Click "Start" to begin a 25-minute study session. The timer will automatically switch to a break when the session ends. You can choose the break time from the dropdown.</p>
+        <p><strong>Q:</strong> How can I pause the timer?</p>
+        <p><strong>A:</strong> Click "Pause" to temporarily stop the timer. Click "Start" again to resume.</p>
+        <p><strong>Q:</strong> Can I reset the timer?</p>
+        <p><strong>A:</strong> Yes, you can click "Reset" at any time to reset the timer to 25 minutes and start over.</p>
+    </div>
+
+    <audio id="alarm" src="alarm.mp3"></audio>
+
+    <script>
+        let timer;
+        let isBreak = false;
+        let isRunning = false;
+        let breakDuration = 25; // Initial study duration in minutes
+        let minutes = breakDuration;
+        let seconds = 0;
+        
+        const timerDisplay = document.getElementById("timer");
+        const breakTypeDisplay = document.getElementById("break-type");
+        const startButton = document.getElementById("start");
+        const pauseButton = document.getElementById("pause");
+        const resetButton = document.getElementById("reset");
+        const breakSelect = document.getElementById("break-time");
+        const alarmSound = document.getElementById("alarm");
+
+        function startTimer() {
+            isRunning = true;
+            startButton.disabled = true;
+            pauseButton.disabled = false;
+            resetButton.disabled = false;
+
+            timer = setInterval(function () {
+                if (minutes === 0 && seconds === 0) {
+                    clearInterval(timer);
+                    toggleBreak();
+                    startTimer();
+                } else {
+                    updateTimerDisplay();
+                    if (seconds === 0) {
+                        minutes--;
+                        seconds = 59;
+                    } else {
+                        seconds--;
+                    }
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const displayMinutes = minutes < 10 ? "0" + minutes : minutes;
+            const displaySeconds = seconds < 10 ? "0" + seconds : seconds;
+            timerDisplay.textContent = `${displayMinutes}:${displaySeconds}`;
+        }
+
+        function toggleBreak() {
+            if (isBreak) {
+                const selectedBreakTime = parseInt(breakSelect.value, 10);
+                minutes = selectedBreakTime;
+                breakTypeDisplay.textContent = "Break";
+            } else {
+                minutes = breakDuration;
+                breakTypeDisplay.textContent = "Study";
+            }
+            isBreak = !isBreak;
+        }
+
+        startButton.addEventListener("click", function () {
+            startTimer();
+        });
+
+        pauseButton.addEventListener("click", function () {
+            if (isRunning) {
+                clearInterval(timer);
+                isRunning = false;
+                startButton.disabled = false;
+                pauseButton.disabled = true;
+            } else {
+                startTimer();
+            }
+        });
+
+        resetButton.addEventListener("click", function () {
+            clearInterval(timer);
+            isBreak = false;
+            minutes = breakDuration;
+            seconds = 0;
+            updateTimerDisplay();
+            breakTypeDisplay.textContent = "Study";
+            startButton.disabled = false;
+            pauseButton.disabled = true;
+            resetButton.disabled = true;
+            isRunning = false;
+        });
+
+        breakSelect.addEventListener("change", function () {
+            if (!isRunning) {
+                breakDuration = parseInt(breakSelect.value, 10);
+                minutes = breakDuration;
+                updateTimerDisplay();
+            }
+        });
+
+        function playAlarm() {
+            alarmSound.play();
+        }
+
+        function stopAlarm() {
+            alarmSound.pause();
+            alarmSound.currentTime = 0;
+        }
+
+        function alertUser() {
+            playAlarm();
+            setTimeout(stopAlarm, 5000); // Stop the alarm sound after 5 seconds
+        }
+
+        // You can customize the audio file (alarm.mp3) to your preference.
+        // Make sure to include the audio file in the same directory as this HTML file.
+    </script>
+</body>
+</html>
