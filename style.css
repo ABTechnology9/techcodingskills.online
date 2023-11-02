@@ -478,3 +478,48 @@ footer {
     text-align: center;
   }
 }
+
+/* 3 Cards Refund, Enrolled and Ratings */
+
+/* Add this CSS code to your existing <style> block or your external CSS file */
+
+.additional-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 25%;
+}
+
+.info-card i {
+  font-size: 48px;
+  color: #007bff; /* Change the color as needed */
+}
+
+.info-card h4 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.info-card p {
+  font-size: 16px;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .additional-info {
+      flex-direction: column;
+  }
+  .info-card {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
