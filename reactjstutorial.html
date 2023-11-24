@@ -60,7 +60,6 @@
 
         .container {
             font-family: Arial, sans-serif;
-
             display: flex;
         }
 
@@ -71,6 +70,34 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
+
+        @media only screen and (max-width: 480px) {
+       .container{
+        display: flex;
+        flex-direction: column;
+       }
+
+       #sidebar {
+            position: static !important;
+            width: 100% !important;
+            top: 0;
+            max-width: 360px;
+            
+        }
+
+        #content {
+            flex: 1;
+            padding: 20px;
+            max-width: 360px;
+            border: 1px solid green;
+            overflow-y: auto;
+            text-wrap: wrap;
+            /* Make the right side panel scrollable */
+        }
+
+
+}
+
     </style>
     <title>React JS Tutorial</title>
 </head>
@@ -241,7 +268,6 @@ npm start</code></pre>
                 This will launch a development server, and you can view your React app in a web browser.
             </p>
 
-            ### React Upgrade
 
             <h2 id="react-upgrade">React Upgrade</h2>
             <p>
@@ -262,7 +288,6 @@ npm install react-dom@latest</code></pre>
                     version.</li>
             </ol>
 
-            ### React ES6
 
             <h2 id="react-es6">React ES6</h2>
             <p>
@@ -297,7 +322,6 @@ ReactDOM.render(
                 function syntax for concise methods.
             </p>
 
-            ### React Render HTML
 
             <h2 id="react-render-html">React Render HTML</h2>
             <p>
@@ -353,7 +377,6 @@ ReactDOM.render(
                 code more readable and resembles the HTML structure.
             </p>
 
-            ### React Components
 
             <h2 id="react-components">React Components</h2>
             <p>
@@ -390,7 +413,6 @@ ReactDOM.render(
                 the other two components to create a complete UI.
             </p>
 
-            ### React Class
 
             <h2 id="react-class">React Class</h2>
             <p>
@@ -415,7 +437,6 @@ ReactDOM.render(
                 `render` method defines what the component should render.
             </p>
 
-            ### React Props
 
             <h2 id="react-props">React Props</h2>
             <p>
@@ -438,7 +459,6 @@ ReactDOM.render(
                 message.
             </p>
 
-            ### React Events
 
             <h2 id="react-events">React Events</h2>
             <p>
@@ -471,7 +491,6 @@ ReactDOM.render(
                 that displays an alert when clicked.
             </p>
 
-            ### React Conditionals
 
             <h2 id="react-conditionals">React Conditionals</h2>
             <p>
@@ -527,7 +546,6 @@ ReactDOM.render(
                 of items and creating a list item (`li`) for each item.
             </p>
 
-            ### React Forms
 
             <h2 id="react-forms">React Forms</h2>
             <p>
@@ -577,7 +595,6 @@ ReactDOM.render(
                 an alert with the submitted value.
             </p>
 
-            ### React Router
 
             <h2 id="react-router">React Router</h2>
             <p>
@@ -629,7 +646,6 @@ ReactDOM.render(
                 components define which component to render based on the URL path.
             </p>
 
-            ### React Memo
 
             <h2 id="react-memo">React Memo</h2>
             <p>
@@ -653,7 +669,6 @@ ReactDOM.render(
                 ensuring that it only re-renders if its props change.
             </p>
 
-            ### React CSS Styling
 
             <h2 id="react-css-styling">React CSS Styling</h2>
             <p>
@@ -691,7 +706,6 @@ ReactDOM.render(
                 imported into the main component file.
             </p>
 
-            ### React Sass Styling
 
             <h2 id="react-sass-styling">React Sass Styling</h2>
             <p>
