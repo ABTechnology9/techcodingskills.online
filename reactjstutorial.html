@@ -2,169 +2,179 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <meta name="google-site-verification" content="UAMRNVF3atIdgU59lsPB4jcgZDRIztGKlJAN9So_jqA" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            /* display: flex;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <meta name="google-site-verification" content="UAMRNVF3atIdgU59lsPB4jcgZDRIztGKlJAN9So_jqA" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* display: flex;
        */
-        }
+    }
 
-        #sidebar {
-            position: sticky !important;
-            top: 0;
-            width: 200px;
-            background-color: #f2f2f2;
-            padding: 20px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
-            /* Make the right side panel scrollable */
+    #sidebar {
+      position: sticky !important;
+      top: 0;
+      width: 200px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      /* Make the right side panel scrollable */
 
-            height: 100dvh;
-        }
+      height: 100dvh;
+    }
 
-        #content {
-            flex: 1;
-            padding: 20px;
-            border: 1px solid green;
-            overflow-y: auto;
-            /* Make the right side panel scrollable */
-        }
+    #content {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid green;
+      overflow-y: auto;
+      /* Make the right side panel scrollable */
+    }
 
-        h2 {
-            color: #333;
-            margin: 10px 0px;
-            margin-top: 20px;
-            font-size: 24px;
-        }
+    h2 {
+      color: #333;
+      margin: 10px 0px;
+      margin-top: 20px;
+      font-size: 24px;
+    }
 
-        p {
-            color: #555;
-            margin: 10px 10px;
-            font-size: 18px;
+    p {
+      color: #555;
+      margin: 10px 10px;
+      font-size: 18px;
 
 
 
-        }
+    }
 
-        li {
-            margin: 10px 10px;
-            font-size: 20px;
-        }
+    li {
+      margin: 10px 10px;
+      font-size: 20px;
+    }
 
-        .container {
-            font-family: Arial, sans-serif;
-            display: flex;
-        }
+    .container {
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
 
-        code {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f8f8f8;
-            padding: 2px 4px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f8f8f8;
+      padding: 2px 4px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
 
-        @media only screen and (max-width: 480px) {
-       .container{
+    @media only screen and (max-width: 480px) {
+      .container {
         display: flex;
         flex-direction: column;
-       }
+      }
 
-       #sidebar {
-            position: static !important;
-            width: 100% !important;
-            top: 0;
-            max-width: 360px;
-            
-        }
+      #sidebar {
+        position: static !important;
+        width: 100% !important;
+        top: 0;
+        max-width: 360px;
 
-        #content {
-            flex: 1;
-            padding: 20px;
-            max-width: 360px;
-            border: 1px solid green;
-            overflow-y: auto;
-            text-wrap: wrap;
-            /* Make the right side panel scrollable */
-        }
+      }
+
+      #content {
+        flex: 1;
+        padding: 20px;
+        max-width: 360px;
+        border: 1px solid green;
+        overflow-y: auto;
+        text-wrap: wrap;
+        /* Make the right side panel scrollable */
+      }
 
 
-}
-
-    </style>
-    <title>React JS Tutorial</title>
+    }
+  </style>
+  <title>React JS Tutorial</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo"><a href="">AB Technology9 Academy</a></div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="earnsgrowth.html">Earn with us</a></li>
-                <li><a href="https://www.youtube.com/@abtechnologies9">Free videos</a></li>
-                <li><a href="contactus.html">Contact us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="logo"><a href="">AB Technology9 Academy</a></div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="earnsgrowth.html">Earn with us</a></li>
+        <li><a href="https://www.youtube.com/@abtechnologies9">Free videos</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="container">
-        <div id="sidebar">
-            <h2>React JS Topics</h2>
-            <ul>
-                <li><a href="#react-home">React Home</a></li>
-                <li><a href="#react-intro">React Intro</a></li>
-                <li><a href="#react-get-started">React Get Started</a></li>
-                <li><a href="#react-upgrade">React Upgrade</a></li>
-                <li><a href="#react-es6">React ES6</a></li>
-                <li><a href="#react-render-html">React Render HTML</a></li>
-                <li><a href="#react-jsx">React JSX</a></li>
-                <li><a href="#react-components">React Components</a></li>
-                <li><a href="#react-class">React Class</a></li>
-                <li><a href="#react-props">React Props</a></li>
-                <li><a href="#react-events">React Events</a></li>
-                <li><a href="#react-conditionals">React Conditionals</a></li>
-                <li><a href="#react-lists">React Lists</a></li>
-                <li><a href="#react-forms">React Forms</a></li>
-                <li><a href="#react-router">React Router</a></li>
-                <li><a href="#react-memo">React Memo</a></li>
-                <li><a href="#react-css-styling">React CSS Styling</a></li>
-                <li><a href="#react-sass-styling">React Sass Styling</a></li>
-            </ul>
-        </div>
+  <div class="container">
+    <div id="sidebar">
+      <h2>React JS Topics</h2>
+      <ul>
+        <li><a href="#react-home">React Home</a></li>
+        <li><a href="#react-intro">React Intro</a></li>
+        <li><a href="#react-get-started">React Get Started</a></li>
+        <li><a href="#react-upgrade">React Upgrade</a></li>
+        <li><a href="#react-es6">React ES6</a></li>
+        <li><a href="#react-render-html">React Render HTML</a></li>
+        <li><a href="#react-jsx">React JSX</a></li>
+        <li><a href="#react-components">React Components</a></li>
+        <li><a href="#react-class">React Class</a></li>
+        <li><a href="#react-props">React Props</a></li>
+        <li><a href="#react-events">React Events</a></li>
+        <li><a href="#react-conditionals">React Conditionals</a></li>
+        <li><a href="#react-lists">React Lists</a></li>
+        <li><a href="#react-forms">React Forms</a></li>
+        <li><a href="#react-router">React Router</a></li>
+        <li><a href="#react-memo">React Memo</a></li>
+        <li><a href="#react-css-styling">React CSS Styling</a></li>
+        <li><a href="#react-sass-styling">React Sass Styling</a></li>
+      </ul>
 
-        <div id="content">
-            <h2 id="react-home">React Home</h2>
-            <p>
-                Welcome to the React JS tutorial! The "React Home" section is the starting point for your journey into
-                the world of React, a powerful JavaScript library for building user interfaces. Here, you'll find
-                essential information to kickstart your React development experience.
-            </p>
-            <p>
-                Whether you're a beginner or an experienced developer, understanding the fundamentals of React is
-                crucial. This section provides an overview of React's core concepts, its benefits, and how it simplifies
-                the process of building interactive and dynamic user interfaces.
-            </p>
-            <p>
-                To get started with React, you'll typically need to install it in your project. You can use the
-                following command to install React using npm (Node Package Manager):
-            </p>
-            <pre>
+      <h2>React JS Hook  Topics</h2>
+      <ul>
+        <!-- Add your topic links here -->
+        <li><a href="#react-home">React Hook Intro</a></li>
+        <li><a href="#react-hook-usestate">React hook-usestate</a></li>
+        <!-- ... other topics ... -->
+        <li><a href="#react-hook-useEffect">React hook-useEffect</a></li>
+        <li><a href="#react-hook-useContext">React hook-useContext</a></li>
+        <li><a href="#react-hook-useRef">React hook-useRef</a></li>
+      </ul>
+    </div>
+
+    <div id="content">
+      <h2 id="react-home">React Home</h2>
+      <p>
+        Welcome to the React JS tutorial! The "React Home" section is the starting point for your journey into
+        the world of React, a powerful JavaScript library for building user interfaces. Here, you'll find
+        essential information to kickstart your React development experience.
+      </p>
+      <p>
+        Whether you're a beginner or an experienced developer, understanding the fundamentals of React is
+        crucial. This section provides an overview of React's core concepts, its benefits, and how it simplifies
+        the process of building interactive and dynamic user interfaces.
+      </p>
+      <p>
+        To get started with React, you'll typically need to install it in your project. You can use the
+        following command to install React using npm (Node Package Manager):
+      </p>
+      <pre>
 <code>npm install react</code>
 </pre>
-            <p>
-                Once React is installed, you can begin creating React components, which are the building blocks of React
-                applications. Here's a simple example of a React component that renders a basic "Hello, React!" message:
-            </p>
-            <pre>
+      <p>
+        Once React is installed, you can begin creating React components, which are the building blocks of React
+        applications. Here's a simple example of a React component that renders a basic "Hello, React!" message:
+      </p>
+      <pre>
 <code>
 import React from 'react';
 
@@ -186,29 +196,29 @@ ReactDOM.render(
 </code>
 
 </pre>
-            <p>
-                Feel free to explore the other topics in the sidebar to dive deeper into specific aspects of React, such
-                as components, props, events, and more. Happy coding!
-            </p>
+      <p>
+        Feel free to explore the other topics in the sidebar to dive deeper into specific aspects of React, such
+        as components, props, events, and more. Happy coding!
+      </p>
 
 
 
 
-            <h2 id="react-intro">React Intro</h2>
-            <p>
-                The "React Intro" section serves as an introduction to React, providing fundamental insights into what
-                React is and why it's widely used in modern web development. React is a JavaScript library developed by
-                Facebook that simplifies the process of building interactive user interfaces.
-            </p>
-            <p>
-                At its core, React introduces a declarative and component-based approach to UI development. Instead of
-                directly manipulating the DOM (Document Object Model), developers can create reusable components that
-                manage their own state and efficiently update the UI in response to changes.
-            </p>
-            <p>
-                Let's take a look at a basic example of a React component to get a sense of how React works:
-            </p>
-            <pre>
+      <h2 id="react-intro">React Intro</h2>
+      <p>
+        The "React Intro" section serves as an introduction to React, providing fundamental insights into what
+        React is and why it's widely used in modern web development. React is a JavaScript library developed by
+        Facebook that simplifies the process of building interactive user interfaces.
+      </p>
+      <p>
+        At its core, React introduces a declarative and component-based approach to UI development. Instead of
+        directly manipulating the DOM (Document Object Model), developers can create reusable components that
+        manage their own state and efficiently update the UI in response to changes.
+      </p>
+      <p>
+        Let's take a look at a basic example of a React component to get a sense of how React works:
+      </p>
+      <pre>
 <code>// Import React
 import React from 'react';
 
@@ -228,74 +238,73 @@ ReactDOM.render(
   document.getElementById('root')
 );</code>
 </pre>
-            <p>
-                In this example:
-            </p>
-            <ul>
-                <li>We import the React library, which is necessary for using React features.</li>
-                <li>We define a functional component called <code>IntroComponent</code> that returns JSX (a syntax
-                    extension for JavaScript recommended by React) representing the structure of the component.</li>
-                <li>We use the <code>ReactDOM.render</code> method to render the <code>IntroComponent</code> into the
-                    HTML element with the ID 'root'.</li>
-            </ul>
-            <p>
-                This is a very basic example, but it showcases the key principles of React, including the use of
-                components and JSX. As you explore further, you'll encounter more advanced concepts and features that
-                make React a powerful and efficient library for building modern web applications.
-            </p>
+      <p>
+        In this example:
+      </p>
+      <ul>
+        <li>We import the React library, which is necessary for using React features.</li>
+        <li>We define a functional component called <code>IntroComponent</code> that returns JSX (a syntax
+          extension for JavaScript recommended by React) representing the structure of the component.</li>
+        <li>We use the <code>ReactDOM.render</code> method to render the <code>IntroComponent</code> into the
+          HTML element with the ID 'root'.</li>
+      </ul>
+      <p>
+        This is a very basic example, but it showcases the key principles of React, including the use of
+        components and JSX. As you explore further, you'll encounter more advanced concepts and features that
+        make React a powerful and efficient library for building modern web applications.
+      </p>
 
 
 
 
-            <h2 id="react-get-started">React Get Started</h2>
-            <p>
-                The "React Get Started" section is your entry point into working with React. To begin, you need to set
-                up a React development environment. The following steps will guide you through the process:
-            </p>
-            <ol>
-                <li>Install Node.js: React applications are typically built using Node.js. You can download and install
-                    Node.js from the official website: <a href="https://nodejs.org/"
-                        target="_blank">https://nodejs.org/</a>.</li>
-                <li>Create a React App: Use the following command in your terminal to create a new React application.
-                    <pre><code>npx create-react-app my-react-app</code></pre>
-                </li>
-                <li>Run the App: Navigate to the app directory and start the development server.
-                    <pre><code>cd my-react-app
+      <h2 id="react-get-started">React Get Started</h2>
+      <p>
+        The "React Get Started" section is your entry point into working with React. To begin, you need to set
+        up a React development environment. The following steps will guide you through the process:
+      </p>
+      <ol>
+        <li>Install Node.js: React applications are typically built using Node.js. You can download and install
+          Node.js from the official website: <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a>.</li>
+        <li>Create a React App: Use the following command in your terminal to create a new React application.
+          <pre><code>npx create-react-app my-react-app</code></pre>
+        </li>
+        <li>Run the App: Navigate to the app directory and start the development server.
+          <pre><code>cd my-react-app
 npm start</code></pre>
-                </li>
-            </ol>
-            <p>
-                This will launch a development server, and you can view your React app in a web browser.
-            </p>
+        </li>
+      </ol>
+      <p>
+        This will launch a development server, and you can view your React app in a web browser.
+      </p>
 
 
-            <h2 id="react-upgrade">React Upgrade</h2>
-            <p>
-                As React evolves, it's essential to keep your projects up-to-date. The "React Upgrade" section covers
-                the process of upgrading your React application to the latest version. To upgrade React, follow these
-                general steps:
-            </p>
-            <ol>
-                <li>Check Current Version: Determine the current version of React used in your project.</li>
-                <li>Review Release Notes: Visit the official React release notes on GitHub to understand the changes and
-                    improvements in newer versions.</li>
-                <li>Update Package.json: Update the React version in your project's <code>package.json</code> file.</li>
-                <li>Run npm Update: Execute the following commands in your terminal:
-                    <pre><code>npm install react@latest
+      <h2 id="react-upgrade">React Upgrade</h2>
+      <p>
+        As React evolves, it's essential to keep your projects up-to-date. The "React Upgrade" section covers
+        the process of upgrading your React application to the latest version. To upgrade React, follow these
+        general steps:
+      </p>
+      <ol>
+        <li>Check Current Version: Determine the current version of React used in your project.</li>
+        <li>Review Release Notes: Visit the official React release notes on GitHub to understand the changes and
+          improvements in newer versions.</li>
+        <li>Update Package.json: Update the React version in your project's <code>package.json</code> file.</li>
+        <li>Run npm Update: Execute the following commands in your terminal:
+          <pre><code>npm install react@latest
 npm install react-dom@latest</code></pre>
-                </li>
-                <li>Test Your App: Thoroughly test your application to ensure compatibility with the upgraded React
-                    version.</li>
-            </ol>
+        </li>
+        <li>Test Your App: Thoroughly test your application to ensure compatibility with the upgraded React
+          version.</li>
+      </ol>
 
 
-            <h2 id="react-es6">React ES6</h2>
-            <p>
-                "React ES6" introduces the use of ECMAScript 2015 (ES6) features in React development. ES6 brings
-                several enhancements to JavaScript, making your React code more concise and readable. Here's an example
-                using ES6 syntax:
-            </p>
-            <pre><code>// Using ES6 class syntax to define a React component
+      <h2 id="react-es6">React ES6</h2>
+      <p>
+        "React ES6" introduces the use of ECMAScript 2015 (ES6) features in React development. ES6 brings
+        several enhancements to JavaScript, making your React code more concise and readable. Here's an example
+        using ES6 syntax:
+      </p>
+      <pre><code>// Using ES6 class syntax to define a React component
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
@@ -317,19 +326,19 @@ ReactDOM.render(
   document.getElementById('root')
 );
 </code></pre>
-            <p>
-                In this example, we use the class syntax for defining a React component and take advantage of the arrow
-                function syntax for concise methods.
-            </p>
+      <p>
+        In this example, we use the class syntax for defining a React component and take advantage of the arrow
+        function syntax for concise methods.
+      </p>
 
 
-            <h2 id="react-render-html">React Render HTML</h2>
-            <p>
-                "React Render HTML" explores how React handles rendering HTML content. React uses JSX to describe what
-                the UI should look like. JSX allows you to write HTML-like code within your JavaScript files. Here's a
-                simple example:
-            </p>
-            <pre><code>// Define a React component with JSX
+      <h2 id="react-render-html">React Render HTML</h2>
+      <p>
+        "React Render HTML" explores how React handles rendering HTML content. React uses JSX to describe what
+        the UI should look like. JSX allows you to write HTML-like code within your JavaScript files. Here's a
+        simple example:
+      </p>
+      <pre><code>// Define a React component with JSX
 function HTMLRenderer() {
   return (
     &lt;div&gt;
@@ -345,18 +354,18 @@ ReactDOM.render(
   document.getElementById('root')
 );
 </code></pre>
-            <p>
-                In this example, the `HTMLRenderer` component uses JSX to define a structure that includes HTML
-                elements. React will then render this structure into the specified HTML element with the ID of 'root.'
-            </p>
+      <p>
+        In this example, the `HTMLRenderer` component uses JSX to define a structure that includes HTML
+        elements. React will then render this structure into the specified HTML element with the ID of 'root.'
+      </p>
 
-            <h2 id="react-jsx">React JSX</h2>
-            <p>
-                "React JSX" introduces the concept of JSX (JavaScript XML), which is a syntax extension for JavaScript
-                recommended by React. JSX allows you to write HTML-like code within your JavaScript files. Here's a
-                basic example:
-            </p>
-            <pre><code>// Using JSX to define a React component
+      <h2 id="react-jsx">React JSX</h2>
+      <p>
+        "React JSX" introduces the concept of JSX (JavaScript XML), which is a syntax extension for JavaScript
+        recommended by React. JSX allows you to write HTML-like code within your JavaScript files. Here's a
+        basic example:
+      </p>
+      <pre><code>// Using JSX to define a React component
 function JSXExample() {
   return (
     &lt;div&gt;
@@ -372,18 +381,18 @@ ReactDOM.render(
   document.getElementById('root')
 );
 </code></pre>
-            <p>
-                In this example, the `JSXExample` component uses JSX to define the structure of the UI. JSX makes the
-                code more readable and resembles the HTML structure.
-            </p>
+      <p>
+        In this example, the `JSXExample` component uses JSX to define the structure of the UI. JSX makes the
+        code more readable and resembles the HTML structure.
+      </p>
 
 
-            <h2 id="react-components">React Components</h2>
-            <p>
-                "React Components" are the building blocks of React applications. Components are reusable and can be
-                composed together to create complex UIs. Here's a simple example with multiple components:
-            </p>
-            <pre><code>// Define two React components
+      <h2 id="react-components">React Components</h2>
+      <p>
+        "React Components" are the building blocks of React applications. Components are reusable and can be
+        composed together to create complex UIs. Here's a simple example with multiple components:
+      </p>
+      <pre><code>// Define two React components
 function Header() {
   return &lt;h1&gt;React Components&lt;/h1&gt;;
 }
@@ -408,18 +417,18 @@ ReactDOM.render(
   document.getElementById('root')
 );
 </code></pre>
-            <p>
-                In this example, we have three components: `Header`, `Content`, and `App`. The `App` component combines
-                the other two components to create a complete UI.
-            </p>
+      <p>
+        In this example, we have three components: `Header`, `Content`, and `App`. The `App` component combines
+        the other two components to create a complete UI.
+      </p>
 
 
-            <h2 id="react-class">React Class</h2>
-            <p>
-                In React, a class component is a JavaScript class that extends `React.Component`. Class components have
-                additional features such as state and lifecycle methods. Here's an example:
-            </p>
-            <pre><code>// Define a React class component
+      <h2 id="react-class">React Class</h2>
+      <p>
+        In React, a class component is a JavaScript class that extends `React.Component`. Class components have
+        additional features such as state and lifecycle methods. Here's an example:
+      </p>
+      <pre><code>// Define a React class component
 class Greeting extends React.Component {
   render() {
     return &lt;h1&gt;Hello, React Class!&lt;/h1&gt;;
@@ -432,18 +441,18 @@ ReactDOM.render(
   document.getElementById('root')
 );
 </code></pre>
-            <p>
-                In this example, the `Greeting` component is a class component that extends `React.Component`. The
-                `render` method defines what the component should render.
-            </p>
+      <p>
+        In this example, the `Greeting` component is a class component that extends `React.Component`. The
+        `render` method defines what the component should render.
+      </p>
 
 
-            <h2 id="react-props">React Props</h2>
-            <p>
-                "React Props" are used to pass data from a parent component to a child component in React. Here's an
-                example demonstrating the use of props:
-            </p>
-            <pre><code>// Define a React component with props
+      <h2 id="react-props">React Props</h2>
+      <p>
+        "React Props" are used to pass data from a parent component to a child component in React. Here's an
+        example demonstrating the use of props:
+      </p>
+      <pre><code>// Define a React component with props
 function Greeting(props) {
   return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
 }
@@ -454,18 +463,18 @@ ReactDOM.render(
   document.getElementById('root')
 );
 </code></pre>
-            <p>
-                In this example, the `Greeting` component receives the `name` prop and uses it to customize the greeting
-                message.
-            </p>
+      <p>
+        In this example, the `Greeting` component receives the `name` prop and uses it to customize the greeting
+        message.
+      </p>
 
 
-            <h2 id="react-events">React Events</h2>
-            <p>
-                Handling events is a crucial part of React development. Here's an example of handling a button click
-                event:
-            </p>
-            <pre><code>// Define a React component with an event handler
+      <h2 id="react-events">React Events</h2>
+      <p>
+        Handling events is a crucial part of React development. Here's an example of handling a button click
+        event:
+      </p>
+      <pre><code>// Define a React component with an event handler
 class ClickExample extends React.Component {
   handleClick() {
     alert('Button Clicked!');
@@ -486,18 +495,18 @@ ReactDOM.render(
   document.getElementById('root')
 );
 </code></pre>
-            <p>
-                In this example, the `ClickExample` class component includes a button with an `onClick` event handler
-                that displays an alert when clicked.
-            </p>
+      <p>
+        In this example, the `ClickExample` class component includes a button with an `onClick` event handler
+        that displays an alert when clicked.
+      </p>
 
 
-            <h2 id="react-conditionals">React Conditionals</h2>
-            <p>
-                Conditional rendering allows you to show different content based on different conditions. Here's an
-                example of using a simple conditional to display content:
-            </p>
-            <pre><code>// Define a React component with conditional rendering
+      <h2 id="react-conditionals">React Conditionals</h2>
+      <p>
+        Conditional rendering allows you to show different content based on different conditions. Here's an
+        example of using a simple conditional to display content:
+      </p>
+      <pre><code>// Define a React component with conditional rendering
 function ConditionalExample(props) {
   return (
     &lt;div&gt;
@@ -512,17 +521,17 @@ ReactDOM.render(
   document.getElementById('root')
 );
 </code></pre>
-            <p>
-                In this example, the `ConditionalExample` component uses a ternary operator to conditionally render
-                different messages based on the `isLoggedIn` prop.
-            </p>
+      <p>
+        In this example, the `ConditionalExample` component uses a ternary operator to conditionally render
+        different messages based on the `isLoggedIn` prop.
+      </p>
 
-            <h2 id="react-lists">React Lists</h2>
-            <p>
-                "React Lists" involve rendering dynamic lists of data. You can use the map function to iterate over an
-                array and render a component for each item. Here's an example:
-            </p>
-            <pre><code>// Define a React component with a list
+      <h2 id="react-lists">React Lists</h2>
+      <p>
+        "React Lists" involve rendering dynamic lists of data. You can use the map function to iterate over an
+        array and render a component for each item. Here's an example:
+      </p>
+      <pre><code>// Define a React component with a list
             function ListExample() {
               const items = ['Item 1', 'Item 2', 'Item 3'];
             
@@ -541,18 +550,18 @@ ReactDOM.render(
               document.getElementById('root')
             );
             </code></pre>
-            <p>
-                In this example, the `ListExample` component renders an unordered list (`ul`) by mapping over an array
-                of items and creating a list item (`li`) for each item.
-            </p>
+      <p>
+        In this example, the `ListExample` component renders an unordered list (`ul`) by mapping over an array
+        of items and creating a list item (`li`) for each item.
+      </p>
 
 
-            <h2 id="react-forms">React Forms</h2>
-            <p>
-                "React Forms" are used to handle user input. React provides a controlled component approach where form
-                elements are controlled by React state. Here's a simple form example:
-            </p>
-            <pre><code>// Define a React component with a form
+      <h2 id="react-forms">React Forms</h2>
+      <p>
+        "React Forms" are used to handle user input. React provides a controlled component approach where form
+        elements are controlled by React state. Here's a simple form example:
+      </p>
+      <pre><code>// Define a React component with a form
             class FormExample extends React.Component {
               constructor(props) {
                 super(props);
@@ -589,19 +598,19 @@ ReactDOM.render(
               document.getElementById('root')
             );
             </code></pre>
-            <p>
-                In this example, the `FormExample` class component uses state to control the value of the input field.
-                The `handleChange` function updates the state on input changes, and the `handleSubmit` function displays
-                an alert with the submitted value.
-            </p>
+      <p>
+        In this example, the `FormExample` class component uses state to control the value of the input field.
+        The `handleChange` function updates the state on input changes, and the `handleSubmit` function displays
+        an alert with the submitted value.
+      </p>
 
 
-            <h2 id="react-router">React Router</h2>
-            <p>
-                "React Router" is a standard library for routing in React applications. It enables navigation between
-                different components based on the URL. Here's a basic example:
-            </p>
-            <pre><code>// Install React Router: npm install react-router-dom
+      <h2 id="react-router">React Router</h2>
+      <p>
+        "React Router" is a standard library for routing in React applications. It enables navigation between
+        different components based on the URL. Here's a basic example:
+      </p>
+      <pre><code>// Install React Router: npm install react-router-dom
             
             // Import necessary components from react-router-dom
             import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -640,19 +649,19 @@ ReactDOM.render(
               document.getElementById('root')
             );
             </code></pre>
-            <p>
-                In this example, the `AppRouter` component uses `BrowserRouter` to enable routing. It defines two
-                components, `Home` and `About`, and provides navigation links using the `Link` component. The `Route`
-                components define which component to render based on the URL path.
-            </p>
+      <p>
+        In this example, the `AppRouter` component uses `BrowserRouter` to enable routing. It defines two
+        components, `Home` and `About`, and provides navigation links using the `Link` component. The `Route`
+        components define which component to render based on the URL path.
+      </p>
 
 
-            <h2 id="react-memo">React Memo</h2>
-            <p>
-                "React Memo" is a higher-order component that memoizes the rendered output of a component, preventing
-                unnecessary re-renders. Here's a simple example:
-            </p>
-            <pre><code>// Define a React component with memoization
+      <h2 id="react-memo">React Memo</h2>
+      <p>
+        "React Memo" is a higher-order component that memoizes the rendered output of a component, preventing
+        unnecessary re-renders. Here's a simple example:
+      </p>
+      <pre><code>// Define a React component with memoization
             const MemoizedComponent = React.memo(function MyComponent(props) {
               // Component logic here
               return &lt;div&gt;Memoized Component&lt;/div&gt;;
@@ -664,18 +673,18 @@ ReactDOM.render(
               document.getElementById('root')
             );
             </code></pre>
-            <p>
-                In this example, the `React.memo` function is used to memoize the `MyComponent` function component,
-                ensuring that it only re-renders if its props change.
-            </p>
+      <p>
+        In this example, the `React.memo` function is used to memoize the `MyComponent` function component,
+        ensuring that it only re-renders if its props change.
+      </p>
 
 
-            <h2 id="react-css-styling">React CSS Styling</h2>
-            <p>
-                "React CSS Styling" involves styling React components. You can use regular CSS or libraries like
-                styled-components. Here's an example using regular CSS:
-            </p>
-            <pre><code>// Define a React component with CSS styling
+      <h2 id="react-css-styling">React CSS Styling</h2>
+      <p>
+        "React CSS Styling" involves styling React components. You can use regular CSS or libraries like
+        styled-components. Here's an example using regular CSS:
+      </p>
+      <pre><code>// Define a React component with CSS styling
             function StyledComponent() {
               return (
                 &lt;div className="styled-component"&gt;
@@ -701,18 +710,18 @@ ReactDOM.render(
               document.getElementById('root')
             );
             </code></pre>
-            <p>
-                In this example, the `StyledComponent` is styled using a separate CSS file. The CSS file is then
-                imported into the main component file.
-            </p>
+      <p>
+        In this example, the `StyledComponent` is styled using a separate CSS file. The CSS file is then
+        imported into the main component file.
+      </p>
 
 
-            <h2 id="react-sass-styling">React Sass Styling</h2>
-            <p>
-                "React Sass Styling" involves using Sass (a CSS preprocessor) to style React components. Here's an
-                example using Sass:
-            </p>
-            <pre><code>// Install node-sass: npm install node-sass
+      <h2 id="react-sass-styling">React Sass Styling</h2>
+      <p>
+        "React Sass Styling" involves using Sass (a CSS preprocessor) to style React components. Here's an
+        example using Sass:
+      </p>
+      <pre><code>// Install node-sass: npm install node-sass
             
             // Define a React component with Sass styling
             function SassComponent() {
@@ -740,58 +749,183 @@ ReactDOM.render(
               document.getElementById('root')
             );
             </code></pre>
-            <p>
-                In this example, the `SassComponent` is styled using a separate Sass file. The Sass file is then
-                imported into the main component file.
-            </p>
+      <p>
+        In this example, the `SassComponent` is styled using a separate Sass file. The Sass file is then
+        imported into the main component file.
+      </p>
 
+      <h2 id="react-hook">
+        What is a Hook?
+      </h2>
+      <p>
+        Hooks in React are functions that enable functional components to use state, lifecycle methods, and other React
+        features previously available only in class components. They were introduced in React 16.8 to make it easier to
+        reuse stateful logic across components.
+      </p>
+      <h2 id="react-hook-usestate">
+        What is a React - useStateHook?
+      </h2>
+      <p>
+        The useState hook allows functional components to manage state. It returns an array with two elements: the
+        current state value and a function that lets you update it. Here's an example: </p>
 
-        </div>
+      <pre>
+                <code>
+                  import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const handlechange =()=>{
+    setCount(count + 1)
+  }
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+    <button onClick={handlechange}>Increment</button>
     </div>
+  );
+}
+
+                </code>
+              </pre>
+
+              <h2 id="react-hook-useEffect">
+                What is a React - useEffectHook?
+              </h2>
+              <p>
+                The useEffect hook is used to perform side effects in functional components. It runs after every render and allows you to manage effects like data fetching, subscriptions, or manually changing the DOM.
+              </p>
+                <pre>
+                  <code>
+                    import React, { useState, useEffect } from 'react';
+
+function DataFetching() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Perform data fetching or any side effect here
+    // This code runs after the component renders
+
+    // Example: Fetch data from an API
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(result => setData(result));
+  }, []); // The empty dependency array means this effect runs once after the initial render
+
+  return (
+    <div>
+      <p>Data: {JSON.stringify(data)}</p>
+    </div>
+  );
+}
+
+                  </code>
+                </pre>
 
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <div class="logo">AB Technology9</div>
+                <h2 id="react-hook-useContext">
+                  What is a React - useContext?
+                </h2>
+                <p>
+                  The useContext hook is used to subscribe to React context without introducing nesting.
+                </p>
 
-            </div>
-            <div class="footer-section moreinfo">
-                <ul class="learnmore">
-                    <li>About us</li>
-                    <li>Contact us</li>
-                    <li>Courses </li>
-                    <li>Earn with Us </li>
-                    <li>Careers </li>
-                    <li>Teach on ABtechnology9 </li>
+                <pre>
+                  <code>
+                    import React, { useContext } from 'react';
+
+// Create a context
+const ThemeContext = React.createContext();
+
+function ThemedComponent() {
+  // Use the useContext hook to subscribe to the context
+  const theme = useContext(ThemeContext);
+
+  return (
+    <div style={
+      { color: theme.textColor, backgroundColor: theme.backgroundColor }}>
+      Themed Component
+    </div>
+  );
+}
+
+                  </code>
+                </pre>
+
+                <h2 id="react-hook-useRef">
+                  What is a React - useRef?
+                </h2>
+                <p>
+                  The useRef hook is used to create mutable object properties that persist across renders. It is often used to access or interact with a DOM element directly.
+                </p>
+
+                <pre>
+                  <code>
+                    import React, { useRef, useEffect } from 'react';
+
+                    function InputFocus() {
+                      // Create a ref object
+                      const inputRef = useRef();
                     
-                </ul>
-            </div>
+                      // Use the ref to focus the input after the component renders
+                      useEffect(() => {
+                        inputRef.current.focus();
+                      }, []);
+                    
+                      return <input ref={inputRef} type="text" />;
+                    }
+                    
+                  </code>
+                </pre>
+                   
+    </div>
+  </div>
 
-            <div class="footer-section moreinfo">
-                <div class="connect">Interview Q&A</div>
-                <ul class="learnmore">
-                    <li><a href="#">html5 & CSS3</a></li>
-                    <li><a href="/javascriptquestions.html">JavaScript</a></li>
-                    <li><a href="/reactjsinterviewquestions.html">Reactjs</a></li>
-                    <li><a href="#">Bootstrap and tailwind</a></li>
-                </ul>
-            </div>
 
-            <div class="footer-section moreinfo">
-                <div class="connect">Connect with Us</div>
-                <ul class="learnmore">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
-            </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="logo">AB Technology9</div>
 
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 AB Technology9 Academy. All rights reserved.</p>
-        </div>
-    </footer>
+      </div>
+      <div class="footer-section moreinfo">
+        <ul class="learnmore">
+          <li>About us</li>
+          <li>Contact us</li>
+          <li>Courses </li>
+          <li>Earn with Us </li>
+          <li>Careers </li>
+          <li>Teach on ABtechnology9 </li>
+
+        </ul>
+      </div>
+
+      <div class="footer-section moreinfo">
+        <div class="connect">Interview Q&A</div>
+        <ul class="learnmore">
+          <li><a href="#">html5 & CSS3</a></li>
+          <li><a href="/javascriptquestions.html">JavaScript</a></li>
+          <li><a href="/reactjsinterviewquestions.html">Reactjs</a></li>
+          <li><a href="#">Bootstrap and tailwind</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section moreinfo">
+        <div class="connect">Connect with Us</div>
+        <ul class="learnmore">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 AB Technology9 Academy. All rights reserved.</p>
+    </div>
+  </footer>
 
 
 
