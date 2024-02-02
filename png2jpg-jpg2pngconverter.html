@@ -1,0 +1,179 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online image converter - Convert JPG to PNG and PNG to JPG easily.">
+    <meta name="keywords" content="image converter, JPG to PNG, PNG to JPG, convert images, free image conversion">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph metadata for social media sharing -->
+    <meta property="og:title" content="Image Converter">
+    <meta property="og:description" content="Free online image converter - Convert JPG to PNG and PNG to JPG easily.">
+    <meta property="og:image" content="url_to_your_thumbnail_image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+
+    <!-- Twitter Card metadata for Twitter sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Image Converter">
+    <meta name="twitter:description" content="Free online image converter - Convert JPG to PNG and PNG to JPG easily.">
+    <meta name="twitter:image" content="url_to_your_thumbnail_image.jpg">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        input {
+            margin: 15px 0;
+            padding: 10px;
+            width: calc(100% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+            text-align: center;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #downloadLink {
+            display: none;
+            margin-top: 20px;
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        #downloadLink:hover {
+            background-color: #219d53;
+        }
+
+        h1 , h2{
+            color: #2980b9;
+        }
+    </style>
+    <title>Image Converter - PNG to JPG / JPG to PNG</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Converter </h1>
+         <h2> JPG to PNG /PNG to JPG </h2>    
+        <input type="file" id="fileInput" />
+        <br>
+        <label>
+            <input type="radio" name="conversionType" value="jpgToPng" checked /> JPG to PNG
+        </label>
+        <label>
+            <input type="radio" name="conversionType" value="pngToJpg" /> PNG to JPG
+        </label>
+        <br>
+        <button onclick="convertImage()">Convert</button>
+        <div id="result"></div>
+        <a id="downloadLink" style="display: none;">Download Converted Image</a>
+    </div>
+
+    <script>
+        function convertImage() {
+            const fileInput = document.getElementById('fileInput');
+            const resultDiv = document.getElementById('result');
+            const downloadLink = document.getElementById('downloadLink');
+            const conversionType = document.querySelector('input[name="conversionType"]:checked').value;
+
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = new Image();
+                    img.onload = function () {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, img.width, img.height);
+
+                        let convertedDataUrl;
+
+                        if (conversionType === 'jpgToPng') {
+                            convertedDataUrl = canvas.toDataURL('image/png');
+                        } else if (conversionType === 'pngToJpg') {
+                            convertedDataUrl = canvas.toDataURL('image/jpeg');
+                        }
+
+                        resultDiv.innerHTML = `<img src="${convertedDataUrl}" alt="Converted Image" />`;
+
+                        // Create download link
+                        downloadLink.href = convertedDataUrl;
+                        downloadLink.download = 'converted_image';
+                        downloadLink.style.display = 'inline-block';
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert('Please choose a file.');
+            }
+        }
+    </script>
+</body>
+</html>
+ 
